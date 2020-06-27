@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@color/blueBack"
+    >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:textColor="@color/fontWhite"
+                  android:textSize="18sp"
+                  android:text="@string/imooc_step"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+        />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/setting_icon"
+            android:textColor="@color/fontWhite" />
+    </RelativeLayout>
+    <ScrollView android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:orientation="vertical"
+                      android:gravity="center_horizontal">
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="大卡"
+
+                          android:gravity="center"
+                          android:textSize="24sp"
+                          android:textColor="@color/fontGray"
+                          android:layout_weight="1"/>
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="活动时间"
+                          android:gravity="center"
+
+                          android:textSize="24sp"
+                          android:textColor="@color/fontGray"
+                          android:layout_weight="1"/>
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="公里"
+
+                          android:gravity="center"
+                          android:textSize="24sp"
+                          android:textColor="@color/fontGray"
+                          android:layout_weight="1"/>
+
+            </LinearLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_marginBottom="4dp">
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="0.00"
+                          android:id="@+id/textCalorie"
+                          android:gravity="center"
+                          android:textSize="24sp"
+                          android:textColor="@color/fontOrange"
+                          android:layout_weight="1"/>
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="0"
+                          android:gravity="center"
+                          android:id="@+id/time"
+                          android:textSize="24sp"
+                          android:textColor="@color/fontPink"
+                          android:layout_weight="1"/>
+                <TextView android:layout_width="0dp"
+                          android:layout_height="wrap_content"
+                          android:text="0.00"
+                          android:id="@+id/distance"
+                          android:gravity="center"
+                          android:textSize="24sp"
+                          android:textColor="@color/fontBlue"
+                          android:layout_weight="1"/>
+
+            </LinearLayout>
+            <FrameLayout
+                    android:id="@+id/stepCountView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                <com.example.imoocstepapp.widgets.CircleProgressBar
+                    android:layout_width="200dp"
+
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/progressBar"
+                    />
+                <TextView
+                        android:id="@+id/stepCount"
+                        android:layout_width="146dp"
+                        android:layout_height="146dp"
+                        android:layout_gravity="center"
+                        android:text="0"
+                        android:textColor="@color/fontBlue"
+                        android:textSize="26sp"
+                        android:gravity="center"
+                        android:background="@drawable/circle_back"
+                />
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:gravity="center"
+                          android:textColor="@color/fontBlue"
+                          android:text="目标:10000步"
+                          android:layout_marginTop="40dp"/>
+            </FrameLayout>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:gravity="center"
+            >
+                <Button android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="2dp"
+                        android:minHeight="32dp"
+                        android:minWidth="120dp"
+                        android:id="@+id/reset"
+                        android:text="重置"
+                        android:background="@drawable/btn_blue_seletor"
+                        android:textColor="#ffffffff"
+                />
+                <Button android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginRight="2dp"
+                        android:minHeight="32dp"
+                        android:minWidth="120dp"
+                        android:id="@+id/btnStart"
+                        android:text="启动"
+                        android:background="@drawable/btn_blue_seletor"
+                        android:textColor="#ffffffff"
+                />
+            </LinearLayout>
+            <com.github.mikephil.charting.charts.BarChart
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/dataChart">
+            </com.github.mikephil.charting.charts.BarChart>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
